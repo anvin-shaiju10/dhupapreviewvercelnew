@@ -6,31 +6,30 @@ export const MEDIA = {
   },
   images: {
     hero: {
-      // Dibakar Roy cover image
-      main: "/lib/dibakar-roy-LM8K3sTei1U-unsplash.jpg"
+      main: "/dibakar-roy-LM8K3sTei1U-unsplash.jpg"
     },
     product: {
-      sareeKasavu: "/lib/one.jpg",
-      sareeWhite: "/lib/two.jpg",
-      sareeModel: "/lib/three.jpg",
-      linenRaw: "/lib/ten.jpg",
-      kurtaBeige: "/lib/five.jpg",
-      jewellery: "/lib/one.jpg",
-      details: "/lib/two.jpg",
-      emeraldFabric: "/lib/three.jpg",
-      bridalRed: "/lib/four.jpg",
-      bridalGold: "/lib/five.jpg",
+      sareeKasavu: "/one.jpg",
+      sareeWhite: "/two.jpg",
+      sareeModel: "/three.jpg",
+      linenRaw: "/four.jpg",
+      kurtaBeige: "/five.jpg",
+      jewellery: "/one.jpg",
+      details: "/two.jpg",
+      emeraldFabric: "/three.jpg",
+      bridalRed: "/four.jpg",
+      bridalGold: "/five.jpg"
     },
     sections: {
-      craftsmanshipPoster: "/lib/five.jpg",
-      aboutHero: "/lib/two.jpg",
-      newsletter: "/lib/three.jpg",
+      craftsmanshipPoster: "/one.jpg",
+      aboutHero: "/two.jpg",
+      newsletter: "/three.jpg",
       curatedArrivals: [
-        "/lib/six.jpg",
-        "/lib/seven.jpg",
-        "/lib/eight.jpg",
-        "/lib/nine.jpg",
-        "/lib/ten.jpg"
+        "/six.jpg",
+        "/seven.jpg",
+        "/eight.jpg",
+        "/nine.jpg",
+        "/ten.jpg"
       ]
     }
   }
