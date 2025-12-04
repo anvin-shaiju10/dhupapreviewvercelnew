@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DHUPA | Threaded Artistry</title>
+    
+    <!-- Fonts: Cormorant Garamond for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif'],
+            },
+            colors: {
+              brand: {
+                ivory: '#FDFBF7',
+                charcoal: '#1A1A1A',
+                gold: '#C5A059', // Slightly muted gold for elegance
+                earth: '#4A4843',
+                stone: '#8E8B82',
+                sand: '#E5E2DA',
+                green: '#2F3E32',
+                red: '#7D2E2E'
+              }
+            },
+            spacing: {
+              '128': '32rem',
+              '144': '36rem',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'scale-slow': 'scaleSlow 20s ease-in-out infinite alternate',
+              'marquee': 'marquee 45s linear infinite',
+              'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: 0, transform: 'translateY(60px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(100%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              scaleSlow: {
+                '0%': { transform: 'scale(1)' },
+                '100%': { transform: 'scale(1.1)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FDFBF7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #C5A059;
+        border-radius: 0px;
+      }
+      
+      body {
+        background-color: #FDFBF7;
+        color: #1A1A1A;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Hide scrollbar for clean horizontal scrolls */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.0.8"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
