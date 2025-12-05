@@ -53,7 +53,7 @@ export const Home: React.FC = () => {
             
             <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-serif text-brand-ivory leading-[0.8] mb-12 drop-shadow-2xl opacity-90">
               <span className="block italic font-light tracking-wide">Threaded</span>
-              <span className="block font-medium tracking-normal">Artistryhhhhhhhh</span>
+              <span className="block font-medium tracking-normal">Artistry</span>
             </h1>
 
             <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="flex justify-center gap-6">
