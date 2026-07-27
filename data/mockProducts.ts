@@ -9,6 +9,7 @@ export const PRODUCTS: Product[] = [
     sku: "DH-KS-001",
     title: "Black and White Glam",
     price: 4500,
+    isCustom: true,
     category: "saree",
     images: [
       MEDIA.images.product.sareeWhite
@@ -25,6 +26,7 @@ export const PRODUCTS: Product[] = [
     sku: "DH-BR-101",
     title: "Modern Glam",
     price: 24000,
+    isCustom: true,
     category: "bridal",
     images: [
       MEDIA.images.product.bridalGold,
@@ -41,6 +43,7 @@ export const PRODUCTS: Product[] = [
     sku: "DH-KT-012",
     title: "model designs",
     price: 3800,
+    isCustom: true,
     category: "kurta-set",
     images: [
       MEDIA.images.product.modelOne,
@@ -56,7 +59,9 @@ export const PRODUCTS: Product[] = [
     slug: "ivory-textured-kurta",
     sku: "DH-KT-013",
     title: "Kurta Collection 1",
-    price: 3600,
+    price: 3150,
+    originalPrice: 3999,
+    discountPercent: 21,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaOne,
@@ -72,7 +77,9 @@ export const PRODUCTS: Product[] = [
     slug: "peach-chikankari-kurta",
     sku: "DH-KT-014",
     title: "Kurta Collection 2",
-    price: 3400,
+    price: 1600,
+    originalPrice: 1999,
+    discountPercent: 20,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaTwo,
@@ -88,7 +95,9 @@ export const PRODUCTS: Product[] = [
     slug: "midnight-embroidered-kurta",
     sku: "DH-KT-015",
     title: "Kurta Collection 3",
-    price: 4200,
+    price: 2499,
+    originalPrice: 2999,
+    discountPercent: 17,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaThree,
@@ -104,7 +113,9 @@ export const PRODUCTS: Product[] = [
     slug: "saffron-drape-kurta",
     sku: "DH-KT-016",
     title: "Kurta Collection 4",
-    price: 4000,
+    price: 1945,
+    originalPrice: 2499,
+    discountPercent: 22,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaFour,
@@ -120,7 +131,9 @@ export const PRODUCTS: Product[] = [
     slug: "grey-loom-kurta",
     sku: "DH-KT-017",
     title: "Kurta Collection 5",
-    price: 3300,
+    price: 1989,
+    originalPrice: 2499,
+    discountPercent: 20,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaFive,
@@ -136,7 +149,9 @@ export const PRODUCTS: Product[] = [
     slug: "emerald-zari-kurta",
     sku: "DH-KT-018",
     title: "Kurta Collection 6",
-    price: 5200,
+    price: 1999,
+    originalPrice: 2499,
+    discountPercent: 20,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaSix,
@@ -152,7 +167,9 @@ export const PRODUCTS: Product[] = [
     slug: "noir-velvet-kurta",
     sku: "DH-KT-019",
     title: "Kurta Collection 7",
-    price: 4600,
+    price: 3275,
+    originalPrice: 3999,
+    discountPercent: 18,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaSeven,
@@ -168,7 +185,9 @@ export const PRODUCTS: Product[] = [
     slug: "misty-satin-kurta",
     sku: "DH-KT-020",
     title: "Kurta Collection 8",
-    price: 4800,
+    price: 1989,
+    originalPrice: 2499,
+    discountPercent: 20,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaEight,
@@ -180,11 +199,65 @@ export const PRODUCTS: Product[] = [
     designerNote: "A contemporary take on formal ease."
   },
   {
+    id: "16",
+    slug: "kurtanine-transition",
+    sku: "DH-KT-021",
+    title: "Kurta Collection 9",
+    price: 2399,
+    originalPrice: 2999,
+    discountPercent: 20,
+    category: "kurta-set",
+    images: [
+      MEDIA.images.product.kurtanine,
+      MEDIA.images.product.kurtanine2
+    ],
+    material: "Handloom Cotton",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "A refined kurta styled with seamless transition imagery.",
+    designerNote: ""
+  },
+  {
+    id: "17",
+    slug: "kurtaten-transition",
+    sku: "DH-KT-022",
+    title: "Kurta Collection 10",
+    price: 2499,
+    originalPrice: 3199,
+    discountPercent: 22,
+    category: "kurta-set",
+    images: [
+      MEDIA.images.product.kurtaten,
+      MEDIA.images.product.kurtaten2
+    ],
+    material: "Handloom Cotton",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "A transition kurta with dynamic movement and soft tailoring.",
+    designerNote: ""
+  },
+  {
+    id: "18",
+    slug: "kurtaeleven-only",
+    sku: "DH-KT-023",
+    title: "Kurta Collection 11",
+    price: 1999,
+    originalPrice: 2499,
+    discountPercent: 20,
+    category: "kurta-set",
+    images: [
+      MEDIA.images.product.kurtaeleven
+    ],
+    material: "Handloom Cotton",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "A singular kurta image with sculptural grace.",
+    designerNote: ""
+  },
+  {
     id: "5",
     slug: "emerald-zari-kaftan",
     sku: "DH-KF-022",
     title: "Emerald Zari Kaftan",
     price: 5200,
+    isCustom: true,
     category: "kurta-set",
     images: [
       MEDIA.images.product.emeraldFabric,
@@ -202,6 +275,7 @@ export const PRODUCTS: Product[] = [
     sku: "DH-KA-021",
     title: "Kalyani - Lokah Universe",
     price: 5600,
+    isCustom: true,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kalyaniOne,
@@ -226,7 +300,7 @@ export const COLLECTIONS: Collection[] = [
   {
     id: "c2",
     title: "Monsoon Earth",
-    description: "Deep greens and wet earth tones.",
+    description: "Deep Earth tones.",
     image: MEDIA.images.product.modelOne,
     link: "/shop?category=kurta-set"
   },
@@ -241,7 +315,7 @@ export const COLLECTIONS: Collection[] = [
     id: "c4",
     label: "Collection 09",
     title: "Kurtas",
-    description: "Kurtas cover curated with kurtacover ima -gery.- kurated kurtas handcrafted for all occasions",
+    description: " Kurtas handcrafted for all occasions",
     image: MEDIA.images.product.kurtaCover,
     link: "/shop?category=kurta-set"
   }

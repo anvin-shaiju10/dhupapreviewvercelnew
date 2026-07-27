@@ -49,10 +49,35 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       </Link>
 
-      <div className="pt-8 pb-4 text-center space-y-2">
+      <div className="pt-8 pb-4 text-center space-y-3">
         <h3 className="text-lg font-serif text-brand-charcoal group-hover:text-brand-gold transition-colors duration-500">
           {product.title}
         </h3>
+        {product.isCustom ? (
+          <span className="inline-flex items-center justify-center rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-3 py-2 text-xs uppercase tracking-[0.35em] text-brand-charcoal">
+            Customization
+          </span>
+        ) : (
+          <div className="space-y-1">
+            <p className="text-2xl md:text-3xl font-serif text-brand-charcoal tracking-tight">
+              {formatPrice(product.price)}
+            </p>
+            {(product.originalPrice || product.discountPercent) && (
+              <div className="flex flex-wrap justify-center items-center gap-3 text-sm text-brand-earth">
+                {product.originalPrice && (
+                  <span className="line-through text-brand-earth/70">
+                    {formatPrice(product.originalPrice)}
+                  </span>
+                )}
+                {product.discountPercent && (
+                  <span className="inline-flex items-center rounded-full bg-brand-charcoal/5 text-[10px] uppercase tracking-[0.25em] text-brand-charcoal px-2 py-1">
+                    {product.discountPercent}% OFF
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

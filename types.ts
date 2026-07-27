@@ -4,6 +4,9 @@ export interface Product {
   sku: string;
   title: string;
   price: number;
+  originalPrice?: number;
+  discountPercent?: number;
+  isCustom?: boolean;
   category: 'saree' | 'set-mundu' | 'kurta-set' | 'bridal' | 'accessories';
   images: string[];
   material: string;

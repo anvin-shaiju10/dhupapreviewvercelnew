@@ -117,7 +117,7 @@ export const Home: React.FC = () => {
               <div className="w-24 h-[1px] bg-brand-charcoal mb-12"></div>
               
               <p className="text-brand-earth text-lg md:text-xl font-light leading-relaxed max-w-md mb-12">
-                Have <span className="font-serif italic font-semibold">Kalyani Priyadarshan</span> in dark black.
+                Designed for <span className="font-serif italic font-semibold text-brand-charcoal">Kalyani Priyadarshan</span>, the sarees bring together the richness of heritage craftsmanship and the clarity of contemporary design, resulting in a timeless expression of modern elegance.
               </p>
               
               <Link to="/about" className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.25em] border-b border-brand-charcoal pb-2 hover:text-brand-gold hover:border-brand-gold transition-all duration-500">
