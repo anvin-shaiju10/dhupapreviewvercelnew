@@ -8,7 +8,7 @@ export const NAVIGATION_LINKS = [
   { name: "Collections", path: "/#collections" },
   { name: "Shop", path: "/shop" },
   { name: "About", path: "/about" },
-  { name: "Contact", path: "/about" }
+  { name: "Contact", path: "/contact" }
 ];
 
 export const SOCIAL_LINKS = {

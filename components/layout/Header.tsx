@@ -144,7 +144,7 @@ export const Header: React.FC = () => {
             <div className="p-8 text-center border-t border-brand-charcoal/5">
               <div className="flex justify-center space-x-8 text-sm font-serif text-brand-charcoal">
                 <Link to="/login" className="hover:text-brand-gold transition-colors uppercase tracking-widest">Sign In</Link>
-                <Link to="/help" className="hover:text-brand-gold transition-colors uppercase tracking-widest">Contact</Link>
+                <Link to="/contact" className="hover:text-brand-gold transition-colors uppercase tracking-widest">Contact</Link>
               </div>
             </div>
           </motion.div>

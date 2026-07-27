@@ -6,6 +6,8 @@ interface VideoBackgroundProps {
   src: string;
   poster?: string;
   className?: string;
+  posterClassName?: string;
+  videoClassName?: string;
   overlayOpacity?: number;
 }
 
@@ -13,6 +15,8 @@ export const VideoBackground: React.FC<VideoBackgroundProps> = ({
   src, 
   poster, 
   className = '',
+  posterClassName = '',
+  videoClassName = '',
   overlayOpacity = 0.2
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,7 +30,7 @@ export const VideoBackground: React.FC<VideoBackgroundProps> = ({
           <ImageWithFallback 
             src={poster} 
             alt="Background" 
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover ${posterClassName}`}
           />
         </div>
       )}
@@ -38,7 +42,7 @@ export const VideoBackground: React.FC<VideoBackgroundProps> = ({
         muted
         playsInline
         onLoadedData={() => setIsLoaded(true)}
-        className={`absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-[1.5s] ease-in-out ${
+        className={`absolute inset-0 w-full h-full object-cover ${videoClassName} z-10 transition-opacity duration-[1.5s] ease-in-out ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >

@@ -25,15 +25,17 @@ export const Home: React.FC = () => {
       {/* Hero Section - Video Background */}
       <section className="relative h-screen w-full overflow-hidden bg-brand-charcoal">
         <motion.div style={{ y: yHero }} className="absolute inset-0">
-          <VideoBackground 
-            src={MEDIA.video.hero}
-            poster={MEDIA.images.hero.main}
-            className="w-full h-full"
-            overlayOpacity={0.3}
-          />
+          <div className="absolute inset-0 z-0">
+            <ImageWithFallback
+              src={MEDIA.images.hero.main}
+              alt="Hero background"
+              className="w-full h-full object-cover object-[18%_50%] sm:object-[20%_50%] md:object-[25%_50%]"
+            />
+          </div>
+          <div className="absolute inset-0 z-10 bg-brand-charcoal opacity-20"></div>
         </motion.div>
         
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10">
+        <div className="absolute inset-0 flex flex-col justify-center items-end text-right pl-10 pr-16 md:pl-12 md:pr-20 lg:pl-14 lg:pr-24 z-20">
           <motion.div 
             initial="hidden"
             animate="visible"
@@ -47,18 +49,23 @@ export const Home: React.FC = () => {
             }}
             className="max-w-5xl"
           >
-            <motion.span variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="block text-brand-ivory text-xs md:text-sm uppercase tracking-[0.4em] mb-6 drop-shadow-md">
-              Est. 2024 • Kerala
-            </motion.span>
-            
-            <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-serif text-brand-ivory leading-[0.8] mb-12 drop-shadow-2xl opacity-90">
-              <span className="block italic font-light tracking-wide">Threaded</span>
-              <span className="block font-medium tracking-normal">Artistry</span>
+            <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-serif font-semibold tracking-tight text-brand-ivory/60 leading-[0.8] mb-6 drop-shadow-[0_4px_20px_rgba(255,255,255,0.08)] opacity-100">
+              <span className="block italic tracking-wide">Threaded</span>
+              <span className="block font-semibold tracking-normal">Artistry</span>
             </h1>
+
+            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mb-10 max-w-xl">
+              <p style={{ fontFamily: 'Alex Brush, cursive' }} className="text-3xl md:text-4xl italic text-brand-ivory/55 tracking-[0.12em] leading-tight drop-shadow-[0_3px_20px_rgba(255,255,255,0.06)]">
+                “Heart in every seam”
+              </p>
+              <p className="mt-4 text-sm md:text-base uppercase tracking-[0.35em] text-brand-ivory/40 font-semibold">
+                — Merlin Lizabeth
+              </p>
+            </motion.div>
 
             <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="flex justify-center gap-6">
               <Link to="/shop">
-                <Button variant="outline" className="border-brand-ivory text-brand-ivory hover:bg-brand-ivory hover:text-brand-charcoal px-10 py-4 text-[11px] tracking-[0.3em]">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-brand-charcoal px-10 py-4 text-[11px] tracking-[0.3em]">
                   Enter Boutique
                 </Button>
               </Link>
@@ -74,24 +81,24 @@ export const Home: React.FC = () => {
             {/* Image Composition */}
             <motion.div 
               style={{ y: yImage1 }}
-              className="md:w-1/2 relative md:pr-12"
+              className="md:w-1/2 relative md:pr-12 md:pl-8"
             >
-              <div className="aspect-[4/5] overflow-hidden bg-brand-sand/20 shadow-2xl relative z-10">
+              <div className="aspect-[4/5] md:aspect-[4/3] overflow-hidden bg-brand-sand/20 shadow-[0_30px_80px_rgba(0,0,0,0.12)] relative z-10 rounded-[2rem] ring-1 ring-brand-charcoal/10">
                  <ImageWithFallback
-                  src={MEDIA.images.product.sareeWhite}
+                  src={MEDIA.images.product.kalyaniOne}
                   alt="Craftsmanship" 
-                  className="w-full h-full object-cover grayscale-[20%] contrast-125" 
+                  className="w-full h-full object-cover object-[20%_50%] sm:object-[25%_50%] md:object-[35%_50%] sm:scale-[1.02] scale-100 grayscale-[10%] contrast-110" 
                 />
               </div>
               {/* Overlapping Detail Image */}
               <motion.div 
                 style={{ y: yImage2 }}
-                className="absolute -bottom-12 -right-4 md:-bottom-16 md:-right-10 w-48 h-64 md:w-56 md:h-72 z-30 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-brand-ivory bg-white"
+                className="absolute -bottom-12 -right-4 md:-bottom-16 md:-right-10 w-48 h-64 md:w-56 md:h-72 z-30 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-brand-ivory bg-white rounded-[1.5rem] overflow-hidden"
               >
                 <ImageWithFallback
-                  src={MEDIA.images.product.details}
+                  src={MEDIA.images.product.kalyaniTwo}
                   alt="Detail" 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover object-[20%_50%] sm:object-[25%_50%] md:object-[35%_50%]"
                 />
               </motion.div>
             </motion.div>
@@ -110,8 +117,7 @@ export const Home: React.FC = () => {
               <div className="w-24 h-[1px] bg-brand-charcoal mb-12"></div>
               
               <p className="text-brand-earth text-lg md:text-xl font-light leading-relaxed max-w-md mb-12">
-                Dhupa redefines Kerala's textile heritage through a lens of contemporary restraint. 
-                We strip away the excess to reveal the profound beauty of hand-spun cotton and pure zari.
+                Have <span className="font-serif italic font-semibold">Kalyani Priyadarshan</span> in dark black.
               </p>
               
               <Link to="/about" className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.25em] border-b border-brand-charcoal pb-2 hover:text-brand-gold hover:border-brand-gold transition-all duration-500">
@@ -200,13 +206,12 @@ export const Home: React.FC = () => {
         </div>
         <div className="container mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-16">
           <div className="md:w-1/2">
-             <span className="text-brand-gold text-xs uppercase tracking-[0.4em] block mb-8">The Wedding Edit</span>
+             <span className="text-brand-gold text-xs uppercase tracking-[0.4em] block mb-8">The Modern Edit</span>
              <h2 className="text-6xl md:text-8xl font-serif text-brand-ivory leading-none mb-10">
-               Royal <br/> <span className="italic font-light">Trousseau</span>
+               Modern <br/> <span className="italic font-light">Glam</span>
              </h2>
              <p className="text-brand-ivory/70 max-w-md font-light leading-relaxed mb-12 text-lg">
-               Handwoven tissue silk, antique gold embellishments, and silhouettes inspired by the Travancore royalty. 
-               Crafted for the modern bride who values heritage.
+               Statement silhouettes, refined embellishments, and a contemporary design language. Crafted for the woman who embraces confidence, individuality, and effortless sophistication.
              </p>
              <Link to="/shop?category=bridal">
                 <Button variant="lux" className="border border-brand-ivory/30 bg-transparent hover:bg-brand-ivory hover:text-brand-charcoal px-12 py-5 tracking-[0.25em]">
@@ -234,7 +239,7 @@ export const Home: React.FC = () => {
             </div>
             <div className="bg-brand-charcoal flex flex-col justify-center items-center text-center p-12 md:p-32 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-              <span className="text-brand-gold text-xs uppercase tracking-[0.4em] mb-8 relative z-10">Collection 0{idx + 1}</span>
+              <span className="text-brand-gold text-xs uppercase tracking-[0.4em] mb-8 relative z-10">{collection.label ?? `Collection 0${idx + 1}`}</span>
               <h3 className="text-5xl md:text-7xl font-serif text-brand-ivory mb-8 relative z-10">{collection.title}</h3>
               <p className="text-brand-ivory/60 max-w-sm font-light leading-loose mb-16 text-lg relative z-10">{collection.description}</p>
               <Link to={collection.link} className="relative z-10">
@@ -268,7 +273,6 @@ export const Home: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"
                   />
                 </div>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-brand-earth mb-3 block">{post.date}</span>
                 <h3 className="text-2xl font-serif text-brand-charcoal mb-4 group-hover:text-brand-gold transition-colors">{post.title}</h3>
                 <p className="text-sm font-light text-brand-earth/80 leading-relaxed mb-6">{post.excerpt}</p>
                 <span className="inline-flex items-center text-[10px] uppercase tracking-widest text-brand-charcoal group-hover:translate-x-2 transition-transform duration-300">

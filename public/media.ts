@@ -6,30 +6,53 @@ export const MEDIA = {
   },
   images: {
     hero: {
-      main: "/dibakar-roy-LM8K3sTei1U-unsplash.jpg"
+      main: "/Updateone.png",
+      secondary: "/Updatetwo.jpg"
     },
     product: {
-      sareeKasavu: "/one.jpg",
-      sareeWhite: "/two.jpg",
-      sareeModel: "/three.jpg",
-      linenRaw: "/four.jpg",
-      kurtaBeige: "/five.jpg",
-      jewellery: "/one.jpg",
-      details: "/two.jpg",
-      emeraldFabric: "/three.jpg",
-      bridalRed: "/four.jpg",
-      bridalGold: "/five.jpg"
+      sareeKasavu: "/IMG_5288.jpeg",
+      sareeWhite: "/blackadnwhite.jpeg",
+      sareeModel: "/modelone.jpeg",
+      linenRaw: "/modeltwo.jpeg",
+      kurtaBeige: "/kurtaone.jpeg",
+      kurtaOne: "/kurtaone.jpeg",
+      kurtaOne2: "/kurtaone2.jpeg",
+      kurtaTwo: "/kurtatwo.jpeg",
+      kurtaTwo2: "/kurtatwo2.jpeg",
+      kurtaThree: "/kurtathree.jpeg",
+      kurtaThree2: "/kurtathree2.jpeg",
+      kurtaFour: "/kurtafour.jpeg",
+      kurtaFour2: "/kurtafour2.jpeg",
+      kurtaFive: "/kurtafive.jpeg",
+      kurtaFive2: "/kurtafive2.jpeg",
+      kurtaSix: "/kurtasix.jpeg",
+      kurtaSix2: "/kurtasix2.jpeg",
+      kurtaSeven: "/kurtaseven.jpeg",
+      kurtaSeven2: "/kurtaseven2.jpg",
+      kurtaEight: "/kurtaeight.jpeg",
+      kurtaEight2: "/kurtaeight2.jpeg",
+      modelOne: "/modelone.jpeg",
+      modelTwo: "/modeltwo.jpeg",
+      blackAndWhiteGlam: "/blackadnwhite.jpeg",
+      jewellery: "/Darkone2.jpeg",
+      details: "/Darkone3.jpeg",
+      emeraldFabric: "/Darkone4.jpeg",
+      bridalRed: "/deep.jpeg",
+      bridalGold: "/deeptwo.jpeg",
+      kalyaniOne: "/Kalyanione.jpg",
+      kalyaniTwo: "/Kalyanitwo.jpg"
     },
     sections: {
-      craftsmanshipPoster: "/one.jpg",
-      aboutHero: "/two.jpg",
-      newsletter: "/three.jpg",
+      craftsmanshipPoster: "/Darkone5.jpeg",
+      aboutHero: "/Darkone6.jpeg",
+      newsletter: "/Darkone7.jpeg",
+      darkone7: "/Darkone7.jpeg",
       curatedArrivals: [
-        "/six.jpg",
-        "/seven.jpg",
-        "/eight.jpg",
-        "/nine.jpg",
-        "/ten.jpg"
+        "/modelone.jpeg",
+        "/modeltwo.jpeg",
+        "/blackadnwhite.jpeg",
+        "/kurtaone.jpeg",
+        "/kurtatwo.jpeg"
       ]
     }
   }

@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCTS } from '../data/mockProducts';
 import { Button } from '../components/ui/Button';
-import { Accordion } from '../components/ui/Accordion';
-import { formatPrice, generateWhatsAppLink } from '../utils/helpers';
+import { generateWhatsAppLink } from '../utils/helpers';
 import { WHATSAPP_NUMBER } from '../constants';
 import { useCart } from '../context/CartContext';
 import { ImageWithFallback } from '../components/common/ImageWithFallback';
@@ -67,7 +66,6 @@ export const ProductDetail: React.FC = () => {
               <h1 className="text-4xl md:text-5xl font-serif text-brand-charcoal leading-none">
                 {product.title}
               </h1>
-              <p className="text-xl font-light text-brand-earth pt-2">{formatPrice(product.price)}</p>
             </div>
 
             <p className="text-sm leading-relaxed text-brand-earth font-light">
@@ -122,20 +120,7 @@ export const ProductDetail: React.FC = () => {
               </p>
             </div>
 
-            {/* Accordions */}
-            <div className="pt-8">
-              <Accordion title="Material & Care" defaultOpen>
-                <p>{product.material}</p>
-                <p className="mt-2">Dry clean only. Store in a muslin cloth to preserve the zari.</p>
-              </Accordion>
-              <Accordion title="Designer's Note">
-                <p className="italic">"{product.designerNote}"</p>
-              </Accordion>
-              <Accordion title="Shipping & Returns">
-                <p>Made to order. Dispatched within 7-10 days.</p>
-                <p className="mt-2">Returns accepted within 14 days of delivery for store credit.</p>
-              </Accordion>
-            </div>
+            {/* Additional product details removed as requested */}
             
           </div>
         </div>

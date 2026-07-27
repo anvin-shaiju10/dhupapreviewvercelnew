@@ -13,11 +13,9 @@ export const Shop: React.FC = () => {
 
   const filters: { label: string; value: FilterState }[] = [
     { label: 'View All', value: 'all' },
-    { label: 'Sarees', value: 'saree' },
-    { label: 'Kurta Sets', value: 'kurta-set' },
-    { label: 'Set Mundu', value: 'set-mundu' },
-    { label: 'Bridal', value: 'bridal' },
-    { label: 'Accessories', value: 'accessories' },
+    { label: 'Glam', value: 'saree' },
+    { label: 'Kurtas', value: 'kurta-set' },
+    { label: 'Bridal', value: 'bridal' }
   ];
 
   const handleFilterChange = (value: FilterState) => {

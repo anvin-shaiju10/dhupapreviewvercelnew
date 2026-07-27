@@ -15,11 +15,9 @@ export const generateCartMessage = (cartItems: any[], total: number): string => 
   
   cartItems.forEach((item, index) => {
     message += `${index + 1}. ${item.title} (SKU: ${item.sku})\n`;
-    message += `   Size: ${item.selectedSize} | Qty: ${item.quantity}\n`;
-    message += `   Price: ${formatPrice(item.price)}\n\n`;
+    message += `   Size: ${item.selectedSize} | Qty: ${item.quantity}\n\n`;
   });
 
-  message += `Total Estimated Value: ${formatPrice(total)}\n`;
   message += `\nPlease confirm availability and shipping details.`;
   
   return message;

@@ -53,9 +53,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <h3 className="text-lg font-serif text-brand-charcoal group-hover:text-brand-gold transition-colors duration-500">
           {product.title}
         </h3>
-        <p className="text-xs text-brand-earth/80 font-light tracking-widest">
-          {formatPrice(product.price)}
-        </p>
       </div>
     </div>
   );
