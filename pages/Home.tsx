@@ -25,11 +25,11 @@ export const Home: React.FC = () => {
       {/* Hero Section - Video Background */}
       <section className="relative h-screen w-full overflow-hidden bg-brand-charcoal">
         <motion.div style={{ y: yHero }} className="absolute inset-0">
-          <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 bottom-0 -left-[14%] w-[114%] z-0 md:left-0 md:w-full">
             <ImageWithFallback
               src={MEDIA.images.hero.main}
               alt="Hero background"
-              className="w-full h-full object-cover object-[-10%_50%] sm:object-[4%_50%] md:object-[25%_50%]"
+              className="w-full h-full object-cover object-[20%_50%] sm:object-[18%_50%] md:object-[25%_50%]"
             />
           </div>
           <div className="absolute inset-0 z-10 bg-brand-charcoal opacity-20"></div>
