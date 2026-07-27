@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
             <ImageWithFallback
               src={MEDIA.images.hero.main}
               alt="Hero background"
-              className="w-full h-full object-cover object-[18%_50%] sm:object-[20%_50%] md:object-[25%_50%]"
+              className="w-full h-full object-cover object-[-10%_50%] sm:object-[4%_50%] md:object-[25%_50%]"
             />
           </div>
           <div className="absolute inset-0 z-10 bg-brand-charcoal opacity-20"></div>
@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
             }}
             className="max-w-5xl"
           >
-            <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-serif font-semibold tracking-tight text-brand-ivory/60 leading-[0.8] mb-6 drop-shadow-[0_4px_20px_rgba(255,255,255,0.08)] opacity-100">
+            <h1 className="text-3xl sm:text-4xl md:text-8xl lg:text-[9rem] font-serif font-semibold tracking-tight text-brand-ivory/60 leading-[0.8] mb-6 drop-shadow-[0_4px_20px_rgba(255,255,255,0.08)] opacity-100">
               <span className="block italic tracking-wide">Threaded</span>
               <span className="block font-semibold tracking-normal">Artistry</span>
             </h1>
