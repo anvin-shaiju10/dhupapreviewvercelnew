@@ -14,6 +14,7 @@ export interface Product {
   description: string;
   designerNote: string;
   isNewArrival?: boolean;
+  isSoldOut?: boolean;
 }
 
 export interface Collection {

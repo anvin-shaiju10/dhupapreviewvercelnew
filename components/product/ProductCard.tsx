@@ -41,6 +41,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </span>
         )}
 
+        {product.isSoldOut && (
+          <span className="absolute top-4 left-4 text-[9px] uppercase tracking-widest text-white bg-brand-charcoal/85 backdrop-blur px-2 py-1 z-30">
+            Sold Out
+          </span>
+        )}
+
         {/* Quick Add Overlay - Slide Up */}
         <div className="absolute inset-x-0 bottom-0 z-30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out bg-brand-ivory/95 backdrop-blur-md border-t border-brand-charcoal/5">
           <button className="w-full py-5 text-[10px] uppercase tracking-[0.25em] text-brand-charcoal hover:text-brand-gold transition-colors flex items-center justify-center gap-3">

@@ -88,16 +88,17 @@ export const PRODUCTS: Product[] = [
     material: "Handloom Cotton",
     sizes: ["XS", "S", "M", "L", "XL"],
     description: "Lightweight chikankari embroidery on a soft peach silhouette.",
-    designerNote: "Inspired by timeless Indian handwork in a relaxed modern shape."
+    designerNote: "Inspired by timeless Indian handwork in a relaxed modern shape.",
+    isSoldOut: true
   },
   {
     id: "9",
     slug: "midnight-embroidered-kurta",
     sku: "DH-KT-015",
     title: "Kurta Collection 3",
-    price: 2499,
+    price: 1999,
     originalPrice: 2999,
-    discountPercent: 17,
+    discountPercent: 33,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaThree,
@@ -113,9 +114,9 @@ export const PRODUCTS: Product[] = [
     slug: "saffron-drape-kurta",
     sku: "DH-KT-016",
     title: "Kurta Collection 4",
-    price: 1945,
+    price: 1000,
     originalPrice: 2499,
-    discountPercent: 22,
+    discountPercent: 60,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaFour,
@@ -131,9 +132,9 @@ export const PRODUCTS: Product[] = [
     slug: "grey-loom-kurta",
     sku: "DH-KT-017",
     title: "Kurta Collection 5",
-    price: 1989,
+    price: 1000,
     originalPrice: 2499,
-    discountPercent: 20,
+    discountPercent: 60,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaFive,
@@ -160,16 +161,17 @@ export const PRODUCTS: Product[] = [
     material: "Silk Blend",
     sizes: ["S", "M", "L", "XL"],
     description: "A rich emerald kurta with elegant zari detailing and a fluid fall.",
-    designerNote: "A statement piece balanced by effortless ease."
+    designerNote: "A statement piece balanced by effortless ease.",
+    isSoldOut: true
   },
   {
     id: "13",
     slug: "noir-velvet-kurta",
     sku: "DH-KT-019",
     title: "Kurta Collection 7",
-    price: 3275,
+    price: 1250,
     originalPrice: 3999,
-    discountPercent: 18,
+    discountPercent: 69,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaSeven,
@@ -196,7 +198,8 @@ export const PRODUCTS: Product[] = [
     material: "Satin",
     sizes: ["XS", "S", "M", "L", "XL"],
     description: "A fluid satin kurta with a luminous sheen and relaxed silhouette.",
-    designerNote: "A contemporary take on formal ease."
+    designerNote: "A contemporary take on formal ease.",
+    isSoldOut: true
   },
   {
     id: "16",
@@ -214,16 +217,17 @@ export const PRODUCTS: Product[] = [
     material: "Handloom Cotton",
     sizes: ["XS", "S", "M", "L", "XL"],
     description: "A refined kurta styled with seamless transition imagery.",
-    designerNote: ""
+    designerNote: "",
+    isSoldOut: true
   },
   {
     id: "17",
     slug: "kurtaten-transition",
     sku: "DH-KT-022",
     title: "Kurta Collection 10",
-    price: 2499,
+    price: 1999,
     originalPrice: 3199,
-    discountPercent: 22,
+    discountPercent: 38,
     category: "kurta-set",
     images: [
       MEDIA.images.product.kurtaten,
@@ -249,7 +253,8 @@ export const PRODUCTS: Product[] = [
     material: "Handloom Cotton",
     sizes: ["XS", "S", "M", "L", "XL"],
     description: "A singular kurta image with sculptural grace.",
-    designerNote: ""
+    designerNote: "",
+    isSoldOut: true
   },
   {
     id: "5",

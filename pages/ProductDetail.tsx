@@ -13,6 +13,7 @@ export const ProductDetail: React.FC = () => {
   const product = PRODUCTS.find(p => p.slug === slug);
   const [selectedSize, setSelectedSize] = useState<string>("");
   const { addToCart } = useCart();
+  const isSoldOut = Boolean(product?.isSoldOut);
 
   if (!product) {
     return (
@@ -33,6 +34,9 @@ export const ProductDetail: React.FC = () => {
   };
 
   const handleAddToCart = () => {
+    if (product.isSoldOut) {
+      return;
+    }
     if (!selectedSize && product.sizes.length > 0) {
       alert("Please select a size to add to bag.");
       return;
@@ -68,6 +72,12 @@ export const ProductDetail: React.FC = () => {
               </h1>
             </div>
 
+            {isSoldOut && (
+              <span className="inline-flex w-fit items-center rounded-full bg-brand-charcoal text-white px-3 py-2 text-[10px] uppercase tracking-[0.3em]">
+                Sold Out
+              </span>
+            )}
+
             <p className="text-sm leading-relaxed text-brand-earth font-light">
               {product.description}
             </p>
@@ -102,9 +112,9 @@ export const ProductDetail: React.FC = () => {
                 fullWidth 
                 variant="primary" 
                 className="h-14"
-                disabled={!selectedSize && product.sizes.length > 0}
+                disabled={isSoldOut || (!selectedSize && product.sizes.length > 0)}
               >
-                Add to Bag
+                {isSoldOut ? 'Sold Out' : 'Add to Bag'}
               </Button>
               <Button 
                 onClick={handleWhatsAppClick} 
