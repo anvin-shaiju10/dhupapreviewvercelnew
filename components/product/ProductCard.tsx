@@ -42,7 +42,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         )}
 
         {product.isSoldOut && (
-          <span className="absolute top-4 left-4 text-[9px] uppercase tracking-widest text-white bg-brand-charcoal/85 backdrop-blur px-2 py-1 z-30">
+          <span className="absolute top-4 left-4 z-30 inline-flex items-center gap-2 rounded-full border border-white/30 bg-black/60 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.28em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.2)] backdrop-blur-md">
+            <span className="h-1.5 w-1.5 rounded-full bg-white/90"></span>
             Sold Out
           </span>
         )}

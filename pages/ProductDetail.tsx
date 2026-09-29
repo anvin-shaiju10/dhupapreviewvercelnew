@@ -73,7 +73,8 @@ export const ProductDetail: React.FC = () => {
             </div>
 
             {isSoldOut && (
-              <span className="inline-flex w-fit items-center rounded-full bg-brand-charcoal text-white px-3 py-2 text-[10px] uppercase tracking-[0.3em]">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-charcoal/10 bg-brand-charcoal text-white px-4 py-2.5 text-[10px] uppercase tracking-[0.34em] shadow-[0_18px_40px_rgba(24,24,24,0.14)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-white/90"></span>
                 Sold Out
               </span>
             )}
